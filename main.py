@@ -65,29 +65,27 @@ def jogo(a,b,numero,resposta,chutes):
 
         contador += 1
         
-        
-if contador == chutes-4:
+        if contador == chutes-3:
             print('\nChute outro numero') 
         
-        if contador == chutes-3:
+        if contador == chutes-2:
             dica_1 = dica1(numero)
             print(dica_1)
             print('\nRestam 3 tentativas!')
         
-        if contador == chutes-2:
+        if contador == chutes-1:
             dica_2 = dica2(numero)
             print(dica_2)
             print('\nRestam 2 tentativas!')
         
-        if contador == chutes-1:
+        if contador == chutes:
             dica_3 = dica3(numero)
             print(f'\n#Dica 3: Seu numero é {dica_3}\nUltima tentativa!')
-        if contador == chutes and numero != resposta:
-
+        if contador == 5 and numero != resposta:
             print('\nNão foi dessa vez! O numero sorteado foi', numero)
             print('\nTente novamente')
             numero = resposta
 jogo(a,b,numero,resposta,chutes) 
          
 if resposta == numero:
-    print(f'\nVocê acertou, muito bem! Seu numero realmente era {numero}'
+    print(f'\nVocê acertou, muito bem! Seu numero realmente era {numero}')
